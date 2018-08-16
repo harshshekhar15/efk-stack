@@ -63,7 +63,7 @@ data:
       @type record_transformer
       <record>
         commit_id c_id
-	pipeline_id p_id
+        pipeline_id p_id
       </record>
     </filter>
     
