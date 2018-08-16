@@ -47,7 +47,6 @@ data:
     </match>
 
   output.conf: |-
-    
     <filter kubernetes.**>
       @type kubernetes_metadata
     </filter>
@@ -55,9 +54,18 @@ data:
     <match kubernetes.var.log.containers.**fluentd**.log>
       @type null
     </match>
+
     <match kubernetes.var.log.containers.**kube-system**.log>
       @type null
     </match>
+
+    <filter kubernetes.**>
+      @type record_transformer
+      <record>
+        build_no 1
+      </record>
+    </filter>
+    
     <match **>
       @type copy
       deep_copy true

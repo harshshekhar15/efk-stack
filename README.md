@@ -1,1 +1,2 @@
-This yaml contains the configurations of fluentd forwarder that `does not include` the logs from `kube-system` and `fluentd`.
+This yaml contains the configurations of fluentd forwarder and aggregator. Forwarder `does not include` the logs from `kube-system` and `fluentd` and send the logs to aggregator within the cluster.
+Aggregator adds a prefix `cluster-logs` to index and sends the logs to elasticsearch running on a different cluster, exposed on `https://e2elogs.test.openebs.io:443/es/`
