@@ -62,7 +62,8 @@ data:
     <filter kubernetes.**>
       @type record_transformer
       <record>
-        build_no 1
+        commit_id c_id
+	pipeline_id p_id
       </record>
     </filter>
     
