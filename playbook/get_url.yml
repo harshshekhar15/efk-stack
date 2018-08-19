@@ -7,5 +7,5 @@
   until:  "'OK' in result.msg"
   delay: 5
   retries: 3
-  delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+  #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
