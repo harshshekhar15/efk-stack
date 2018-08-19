@@ -13,7 +13,7 @@
          args:
            executable: /bin/bash
          register: result_kube_home
-         delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
+         #delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
          changed_when: True
 
        - name: Download YAML for Fluentd aggergator configmap
@@ -50,51 +50,51 @@
          shell: source ~/.profile; kubectl create ns {{ namespace }}
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Applying Fluentd aggregator configmap
          shell: source ~/.profile; kubectl apply -f "{{ result_kube_home.stdout }}/{{ agg_cnfg_yaml_alias }}"
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Applying Fluentd aggregator deployment
          shell: source ~/.profile; kubectl apply -f "{{ result_kube_home.stdout }}/{{ agg_dpl_yaml_alias }}"
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Applying Fluentd aggregator services
          shell: source ~/.profile; kubectl apply -f "{{ result_kube_home.stdout }}/{{ agg_svc_yaml_alias }}"
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Replace the default Commit-Id in Fluentd forwarder configmap yaml
          replace:
            path: "{{ result_kube_home.stdout }}/{{ fwd_cnfg_yaml_alias }}"
            regexp: 'commit_id c_id'
            replace: 'commit_id "{{ commit_id }}" '
-         delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
+         #delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
 
        - name: Replace the default Pipeline-Id in Fluentd forwarder configmap yaml
          replace:
            path: "{{ result_kube_home.stdout }}/{{ fwd_cnfg_yaml_alias }}"
            regexp: 'pipeline_id p_id'
            replace: 'pipeline_id "{{ pipeline_id }}"'
-         delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
+         #delegate_to: "{{groups['kubernetes-kubemasters'].0}}"
 
        - name: Applying Fluentd forwarder configmap
          shell: source ~/.profile; kubectl apply -f "{{ result_kube_home.stdout }}/{{ fwd_cnfg_yaml_alias }}"
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Applying Fluentd forwarder daemonset
          shell: source ~/.profile; kubectl apply -f "{{ result_kube_home.stdout }}/{{ fwd_dmn_yaml_alias }}"
          args:
            executable: /bin/bash
-         delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
+         #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
        - name: Setting the deployment flag
          set_fact:
