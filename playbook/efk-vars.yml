@@ -1,22 +1,22 @@
 #utils_path: '{{ inventory_dir | dirname }}'
 
-aggregator_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/F-cluster-configs/fluentd-aggregator-config.yaml?token=AcNfYMf5N-CTYFPtTDmjoW0flXvK86WCks5bflwUwA%3D%3D
+aggregator_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-config.yaml
 
 agg_cnfg_yaml_alias: fluentd-aggregator-config.yaml
 
-aggregator_deployment_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-deployment.yaml?token=AcNfYOifNbXpeXo-TRhD-Ni8BMY0JLtFks5bflyPwA%3D%3D
+aggregator_deployment_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-deployment.yaml
 
 agg_dpl_yaml_alias: fluentd-aggregator-deployment.yaml
 
-aggregator_services_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-svc.yaml?token=AcNfYDBmojkEkqYsVNnum_SOQ4AZ61siks5bflyMwA%3D%3D
+aggregator_services_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-svc.yaml
 
 agg_svc_yaml_alias: fluentd-aggregator-svc.yaml
 
-forwarder_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/F-cluster-configs/fluentd-forwarder-config.yaml?token=AcNfYOaUOBpq_zmchSxg-1CM9BX0W9-Vks5bflv3wA%3D%3D
+forwarder_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-forwarder-config.yaml
 
 fwd_cnfg_yaml_alias: fluentd-forwarder-config.yaml
 
-forwarder_daemonset_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-forwarder-daemonset.yaml?token=AcNfYDh-I3s-sHvbjGhFHrRvIByicC5eks5bflx0wA%3D%3D
+forwarder_daemonset_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-forwarder-daemonset.yaml
 
 fwd_dmn_yaml_alias: fluentd-forwarder-daemonset.yaml
 
