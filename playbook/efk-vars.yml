@@ -1,6 +1,6 @@
 #utils_path: '{{ inventory_dir | dirname }}'
 
-aggregator_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-aggregator-config.yaml
+aggregator_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/F-cluster-configs/fluentd-aggregator-config.yaml
 
 agg_cnfg_yaml_alias: fluentd-aggregator-config.yaml
 
@@ -12,7 +12,7 @@ aggregator_services_link: https://raw.githubusercontent.com/shiveshabhishek/efk-
 
 agg_svc_yaml_alias: fluentd-aggregator-svc.yaml
 
-forwarder_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/master/fluentd/fluentd-forwarder-config.yaml
+forwarder_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/F-cluster-configs/fluentd-forwarder-config.yaml
 
 fwd_cnfg_yaml_alias: fluentd-forwarder-config.yaml
 
