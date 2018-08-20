@@ -96,12 +96,12 @@
            executable: /bin/bash
          #delegate_to: "{{ groups['kubernetes-kubemasters'].0 }}"
 
-       - name: Setting the deployment flag
+       - name: Setting the Fluent deployment passed flag
          set_fact:
            flag: Fluentd Deployed
 
      rescue:
 
-       - name: Setting the fail flag
+       - name: Setting the Fluent deployment failed flag
          set_fact:
            flag: Fluentd Deployment Failed
