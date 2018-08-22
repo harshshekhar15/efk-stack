@@ -25,3 +25,11 @@ namespace: logging
 commit_id: "{{ commit_id }}"
 
 pipeline_id: "{{ pipeline_id }}"
+
+test_artifacts:
+  - fluentd-aggregator-config.yaml
+  - fluentd-aggregator-deployment.yaml
+  - fluentd-aggregator-svc.yaml
+  - fluentd-forwarder-config.yaml
+  - fluentd-forwarder-daemonset.yaml
+
