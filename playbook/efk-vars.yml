@@ -1,5 +1,3 @@
-#utils_path: '{{ inventory_dir | dirname }}'
-
 aggregator_configmap_link: https://raw.githubusercontent.com/shiveshabhishek/efk-stack/F-cluster-configs/fluentd-aggregator-config.yaml
 
 agg_cnfg_yaml_alias: fluentd-aggregator-config.yaml
